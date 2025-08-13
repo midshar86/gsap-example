@@ -1,1 +1,1 @@
-const t="/other/yun.svg";export{t as default};
+const e="/gsap-example/other/yun.svg";export{e as default};

@@ -1,1 +1,1 @@
-const t="/other/tushe.svg";export{t as default};
+const e="/gsap-example/other/tushe.svg";export{e as default};

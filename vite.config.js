@@ -25,8 +25,10 @@ export default defineConfig({
     exclude: ["node:url"], // 排除 Node.js 模块
   },
   build: {
+    outDir: "docs",
     rollupOptions: {
       output: {
+        name: "docs",
         // 控制 JS 文件（包括入口文件和动态导入的块）
         entryFileNames: "js/[name].js",
         chunkFileNames: "js/[name].js",
@@ -44,6 +46,7 @@ export default defineConfig({
       },
     },
   },
+  base: process.env.NODE_ENV === "production" ? "gsap-example" : "/",
   // 在构建时运行脚本
   // build: {
   //   rollupOptions: {

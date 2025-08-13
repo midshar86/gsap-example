@@ -1,1 +1,1 @@
-const a="/other/cahan.svg";export{a as default};
+const a="/gsap-example/other/cahan.svg";export{a as default};

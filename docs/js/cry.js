@@ -1,1 +1,1 @@
-const r="/other/cry.svg";export{r as default};
+const e="/gsap-example/other/cry.svg";export{e as default};
