@@ -10,13 +10,16 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
 import { gsap, Flip } from "@/utils/gsap"
+const createImgUrl = (path) => {
+  return new URL(path, import.meta.url).href
+}
 const imgsList = ref([
-  "/src/assets/static/imgs/1.jpeg",
-  "/src/assets/static/imgs/2.jpeg",
-  "/src/assets/static/imgs/3.jpeg",
-  "/src/assets/static/imgs/4.jpeg",
-  "/src/assets/static/imgs/5.jpg",
-  "/src/assets/static/imgs/6.jpeg",
+  createImgUrl("../assets/static/imgs/1.jpeg"),
+  createImgUrl("../assets/static/imgs/2.jpeg"),
+  createImgUrl("../assets/static/imgs/3.jpeg"),
+  createImgUrl("../assets/static/imgs/4.jpeg"),
+  createImgUrl("../assets/static/imgs/5.jpg"),
+  createImgUrl("../assets/static/imgs/6.jpeg"),
 ])
 let bigPic = null
 onMounted(() => {

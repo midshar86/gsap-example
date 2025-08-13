@@ -9,18 +9,21 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { Observer, gsap, SplitText } from '@/utils/gsap';
-console.log("Home",import.meta.env);
+console.log("Home", import.meta.env);
+const createImgUrl = (path) => {
+  return new URL(path, import.meta.url).href
+}
 const imgsList = ref([
-  "/src/assets/static/imgs/1.jpeg",
-  "/src/assets/static/imgs/2.jpeg",
-  "/src/assets/static/imgs/3.jpeg",
-  "/src/assets/static/imgs/4.jpeg",
-  "/src/assets/static/imgs/5.jpg",
-  "/src/assets/static/imgs/6.jpeg",
-  "/src/assets/static/imgs/7.jpeg",
-  "/src/assets/static/imgs/8.jpg",
-  "/src/assets/static/imgs/9.jpeg",
-  "/src/assets/static/imgs/10.jpg",
+  createImgUrl("../assets/static/imgs/1.jpeg"),
+  createImgUrl("../assets/static/imgs/2.jpeg"),
+  createImgUrl("../assets/static/imgs/3.jpeg"),
+  createImgUrl("../assets/static/imgs/4.jpeg"),
+  createImgUrl("../assets/static/imgs/5.jpg"),
+  createImgUrl("../assets/static/imgs/6.jpeg"),
+  createImgUrl("../assets/static/imgs/7.jpeg"),
+  createImgUrl("../assets/static/imgs/8.jpg"),
+  createImgUrl("../assets/static/imgs/9.jpeg"),
+  createImgUrl("../assets/static/imgs/10.jpg"),
 ])
 onMounted(() => {
   const split = SplitText.create('.content', { type: 'chars' });
@@ -30,7 +33,7 @@ onMounted(() => {
     stagger: 0.5,
     autoAlpha: 0,
     stagger: 0.1,
-    ease:'bounce.out',
+    ease: 'bounce.out',
     scrollTrigger: {
       trigger: '.root',
       start: 'top top',

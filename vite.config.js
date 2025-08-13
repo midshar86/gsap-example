@@ -46,7 +46,7 @@ export default defineConfig({
       },
     },
   },
-  base: process.env.NODE_ENV === "production" ? "gsap-example" : "/",
+  base: process.env.NODE_ENV === "production" ? "/gsap-example" : "/",
   // 在构建时运行脚本
   // build: {
   //   rollupOptions: {
