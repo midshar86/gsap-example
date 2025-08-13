@@ -38,8 +38,11 @@ export default defineConfig({
           if (/\.css$/.test(name)) {
             return "css/[name].[ext]"; // CSS 文件放到 css/ 目录
           }
-          if (/\.(png|jpe?g|gif|svg|webp|ico|woff2?|eot|ttf|otf)$/.test(name)) {
+          if (/\.(png|gif|svg|ico|woff2?|eot|ttf|otf)$/.test(name)) {
             return "other/[name].[ext]"; // 其他静态资源放到 other/ 目录
+          }
+          if (/\.(jpg|jpeg|webp)$/.test(name)) {
+            return "assets/static/imgs/[name].[ext]";
           }
           return "[name].[ext]"; // 默认处理（理论上不会用到）
         },

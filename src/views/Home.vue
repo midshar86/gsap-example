@@ -10,20 +10,20 @@
 import { ref, onMounted } from 'vue'
 import { Observer, gsap, SplitText } from '@/utils/gsap';
 console.log("Home", import.meta.env);
-const createImgUrl = (path) => {
-  return new URL(path, import.meta.url).href
+const createImgUrl = (file) => {
+  return new URL(`../assets/static/imgs/${file}`, import.meta.url).href
 }
 const imgsList = ref([
-  createImgUrl("../assets/static/imgs/1.jpeg"),
-  createImgUrl("../assets/static/imgs/2.jpeg"),
-  createImgUrl("../assets/static/imgs/3.jpeg"),
-  createImgUrl("../assets/static/imgs/4.jpeg"),
-  createImgUrl("../assets/static/imgs/5.jpg"),
-  createImgUrl("../assets/static/imgs/6.jpeg"),
-  createImgUrl("../assets/static/imgs/7.jpeg"),
-  createImgUrl("../assets/static/imgs/8.jpg"),
-  createImgUrl("../assets/static/imgs/9.jpeg"),
-  createImgUrl("../assets/static/imgs/10.jpg"),
+  createImgUrl("1.jpeg"),
+  createImgUrl("2.jpeg"),
+  createImgUrl("3.jpeg"),
+  createImgUrl("4.jpeg"),
+  createImgUrl("5.jpg"),
+  createImgUrl("6.jpeg"),
+  createImgUrl("7.jpeg"),
+  createImgUrl("8.jpg"),
+  createImgUrl("9.jpeg"),
+  createImgUrl("10.jpg"),
 ])
 onMounted(() => {
   const split = SplitText.create('.content', { type: 'chars' });
